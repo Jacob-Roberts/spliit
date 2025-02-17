@@ -8,7 +8,6 @@ export function StatsDisplay() {
 
 	return (
 		<>
-			Already{" "}
 			<strong>
 				{stats ? <AnimatedCounter count={stats?.groupsCount} /> : "…"}
 			</strong>{" "}
@@ -32,7 +31,7 @@ function useStats() {
 }
 
 export function AnimatedCounter({ count }: { count: number }) {
-	const start = count - 10;
+	const start = Math.max(count - 10, 0);
 	const [current, setCurrent] = useState(start);
 
 	useEffect(() => {

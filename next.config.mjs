@@ -6,7 +6,9 @@ const withNextIntl = createNextIntlPlugin()
  * Undefined entries are not supported. Push optional patterns to this array only if defined.
  * @type {import('next/dist/shared/lib/image-config').RemotePattern}
  */
-const remotePatterns = []
+const remotePatterns = [
+  { hostname: 'avatars.githubusercontent.com' },
+]
 
 // S3 Storage
 if (process.env.S3_UPLOAD_ENDPOINT) {

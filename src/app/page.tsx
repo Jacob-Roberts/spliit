@@ -46,7 +46,7 @@ export default function HomePage() {
 					</p>
 					<div className="flex gap-2">
 						<Button asChild size="lg">
-							<Link href="/groups/create">{t("Homepage.button.groups")}</Link>
+							<Link href="/groups">{t("Homepage.button.groups")}</Link>
 						</Button>
 					</div>
 					<p className="mt-12 max-w-[42rem] leading-normal text-muted-foreground text-xl sm:text-2xl sm:leading-8">

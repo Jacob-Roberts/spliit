@@ -76,3 +76,13 @@ export function getTotalActiveUserShare(
 
   return parseFloat(total.toFixed(2))
 }
+
+export function getTotalActiveUserYouOwe(
+  activeUserId: string | null,
+  expenses: NonNullable<Awaited<ReturnType<typeof getGroupExpenses>>>,
+): number {
+  const totalPaidFor = getTotalActiveUserPaidFor(activeUserId, expenses)
+  const totalShare = getTotalActiveUserShare(activeUserId, expenses)
+
+  return -parseFloat((totalPaidFor - totalShare).toFixed(2))
+}

@@ -14,6 +14,10 @@
     "madeIn": "Made in Montréal, Québec 🇨🇦",
     "builtBy": "Built by <author>Sebastien Castiel</author> and <source>contributors</source>"
   },
+  "Overview": {
+    "title": "Overview",
+    "howToSettle": "How to settle up"
+  },
   "Expenses": {
     "title": "Expenses",
     "description": "Here are the expenses that you created for your group.",
@@ -261,7 +265,7 @@
       "description": "Here are suggestions for optimized reimbursements between participants.",
       "noImbursements": "It looks like your group doesn’t need any reimbursement 😁",
       "owes": "<strong>{from}</strong> owes <strong>{to}</strong>",
-      "markAsPaid": "Mark as paid"
+      "markAsPaid": "Mark as settled"
     }
   },
   "Stats": {
@@ -271,9 +275,11 @@
       "description": "Spending summary of the entire group.",
       "groupSpendings": "Total group spendings",
       "groupEarnings": "Total group earnings",
-      "yourSpendings": "Your total spendings",
-      "yourEarnings": "Your total earnings",
-      "yourShare": "Your total share"
+      "yourSpendings": "You've paid",
+      "yourEarnings": "You've earned",
+      "yourShare": "It cost you",
+      "youOwe": "You owe",
+      "youAreOwed": "You're owed"
     }
   },
   "Activity": {

@@ -1,5 +1,6 @@
 'use client'
 import { TotalsGroupSpending } from '@/app/groups/[groupId]/stats/totals-group-spending'
+import { TotalsYouOwe } from '@/app/groups/[groupId]/stats/totals-you-owe'
 import { TotalsYourShare } from '@/app/groups/[groupId]/stats/totals-your-share'
 import { TotalsYourSpendings } from '@/app/groups/[groupId]/stats/totals-your-spending'
 import { Skeleton } from '@/components/ui/skeleton'
@@ -31,6 +32,7 @@ export function Totals() {
     totalGroupSpendings,
     totalParticipantShare,
     totalParticipantSpendings,
+    totalParticipantYouOwe,
   } = data
 
   return (
@@ -41,12 +43,16 @@ export function Totals() {
       />
       {participantId && (
         <>
+          <TotalsYourShare
+            totalParticipantShare={totalParticipantShare}
+            currency={group.currency}
+          />
           <TotalsYourSpendings
             totalParticipantSpendings={totalParticipantSpendings}
             currency={group.currency}
           />
-          <TotalsYourShare
-            totalParticipantShare={totalParticipantShare}
+          <TotalsYouOwe
+            totalParticipantYouOwe={totalParticipantYouOwe}
             currency={group.currency}
           />
         </>

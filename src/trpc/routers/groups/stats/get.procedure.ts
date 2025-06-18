@@ -2,6 +2,7 @@ import { getGroupExpenses } from '@/lib/api'
 import {
   getTotalActiveUserPaidFor,
   getTotalActiveUserShare,
+  getTotalActiveUserYouOwe,
   getTotalGroupSpending,
 } from '@/lib/totals'
 import { baseProcedure } from '@/trpc/init'
@@ -26,10 +27,15 @@ export const getGroupStatsProcedure = baseProcedure
       participantId !== undefined
         ? getTotalActiveUserShare(participantId, expenses)
         : undefined
+    const totalParticipantYouOwe =
+      participantId !== undefined
+        ? getTotalActiveUserYouOwe(participantId, expenses)
+        : undefined
 
     return {
       totalGroupSpendings,
       totalParticipantSpendings,
       totalParticipantShare,
+      totalParticipantYouOwe,
     }
   })

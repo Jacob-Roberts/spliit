@@ -5,5 +5,5 @@ export default async function GroupPage({
 }: {
   params: { groupId: string }
 }) {
-  redirect(`/groups/${groupId}/expenses`)
+  redirect(`/groups/${groupId}/overview`)
 }
